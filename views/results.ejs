@@ -37,5 +37,17 @@
 			</form>
 		</div>
 	</div>
+
+	<div class="row"><h2>Results for <%= searched %></h2></div>
+	
+	<% for (var i = 0; i < resource.length-1; i++) { %>
+	<div class="row">
+		<div class="col-lg-6">
+			<h3><%= resource[i].Text %></h3>
+			→ <a href="<%= resource[i].FirstURL %>"><%= resource[i].FirstURL %></a>
+		</div>
+	</div>
+	<% } %>
+
   </body>
 </html>
